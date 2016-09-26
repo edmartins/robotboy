@@ -1,0 +1,1 @@
+select id, name from accounts where id = @@0@@;

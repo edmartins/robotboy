@@ -1,0 +1,23 @@
+database:
+  adapter: "mysql2"
+  host: "host"
+  port: 3306
+  username: "username"
+  password: "password"
+  database: "database"
+mail:
+  basic_test:
+    from: "basic_test@abc.com.br"
+    to: "fulano@abc.com.br"
+    subject: "select"
+    query: "select id, name from accounts where id = 1227;"
+    expected_result: "id;name\n1227;demo\n"
+  xls_test:
+    from: "xls_test@abc.com.br"
+    to: "fulano@abc.com.br"
+    subject: "relatório"
+    body: "Prezados,\n\nSegue o relatório.\n\nAtt,"
+    query: "select id, name from accounts where id = 1227;"
+    expected_result: "id;name\n1227;demo\n"
+  params_test:
+    params: "1227,1285"

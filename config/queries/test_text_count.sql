@@ -1,0 +1,1 @@
+select count(*) as test_count from accounts;

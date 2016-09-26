@@ -1,0 +1,6 @@
+query:
+  file: test_params_env.sql
+  results_format: "size"
+  alert_condition: "== 2"
+email:
+  subject: "test params env"

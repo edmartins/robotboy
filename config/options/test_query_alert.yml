@@ -1,0 +1,5 @@
+query:
+  file: test_query_alert.sql
+  results_format: "xls"
+email:
+  subject: "test query alert"

@@ -1,0 +1,6 @@
+query:
+  file: test_xls.sql
+  results_format: "xls"
+email:
+  subject: "test xls"
+  body: "Test xls"

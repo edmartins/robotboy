@@ -1,0 +1,6 @@
+query:
+  file: test_text_size.sql
+  results_format: "size"
+  alert_condition: "> 0"
+email:
+  subject: "test text size"

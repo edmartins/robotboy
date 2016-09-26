@@ -1,0 +1,6 @@
+query:
+  file: test_text_count.sql
+  results_format: "count"
+  alert_condition: "> 10"
+email:
+  subject: "test text count"
