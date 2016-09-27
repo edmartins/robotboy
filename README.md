@@ -28,7 +28,7 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
   
   You can see how configure this at this link [mikel/mail](https://github.com/mikel/mail)
 
-  ### Basic (text mode)
+### Basic (text mode)
 
   Create a file in ```config/queries/<sql_file_name>.sql```:
 
@@ -63,7 +63,7 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
   An alert will be sent by email
 
-  ### Report (xls mode)
+### Report (xls mode)
 
   Create a file in ```config/queries/<sql_file_name>.sql```:
 
@@ -98,7 +98,7 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
   A report will be sent by email
 
-  ### With params (in .yml file)
+### With params (in .yml file)
 
   Create a file in ```config/queries/<sql_file_name>.sql```:
 
@@ -139,7 +139,7 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
   An alert will be sent by email
 
-  ### With params (env var)
+### With params (env var)
 
   Create a file in ```config/queries/<sql_file_name>.sql```:
 
@@ -180,12 +180,12 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
 ### YAML file combinations
 
-  The possible combinations from ```results_format``` are:
+The possible combinations from ```results_format``` are:
   - ```xls```
   - ```size```
   - ```count```
 
-  ```size``` and ```count``` can be used with ```alert_condition``` option, the possible combinations are:
+```size``` and ```count``` can be used with ```alert_condition``` option, the possible combinations are:
   - ```> [some_value]```
   - ```>= [some_value]```
   - ```< [some_value]```
