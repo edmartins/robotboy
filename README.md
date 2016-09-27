@@ -30,13 +30,13 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
 ### Basic (text mode)
 
-  Create a file in ```config/queries/<sql_file_name>.sql```:
+  1. Create a file in ```config/queries/<sql_file_name>.sql```:
 
   ```sql
   select id, name from accounts where id = 1227;
   ```
 
-  Create a file in ```config/options/<yaml_file_name>.yml```:
+  2. Create a file in ```config/options/<yaml_file_name>.yml```:
   
   ```yaml
   database:
@@ -57,21 +57,21 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
     subject: "Alert: 1 account found!"
   ```
 
-  **Running alert task**
+  3. Run alert task
 
     $ bundle exec rake query_alert option=<yaml_file_name>
 
-  An alert will be sent by email
+  4. An alert will be sent by email
 
 ### Report (xls mode)
 
-  Create a file in ```config/queries/<sql_file_name>.sql```:
+  1. Create a file in ```config/queries/<sql_file_name>.sql```:
 
   ```sql
   select id, name from accounts where id = 1227;
   ```
 
-  Create a file in ```config/options/<yaml_file_name>.yml```:
+  2. Create a file in ```config/options/<yaml_file_name>.yml```:
   
   ```yaml
   database:
@@ -92,15 +92,15 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
     body: "Dear,\n\nfollowing the report.\n\nBest regards,"
   ```
 
-  **Running alert task**
+  3. Run alert task
 
     $ bundle exec rake query_alert option=<yaml_file_name>
 
-  A report will be sent by email
+  4. A report will be sent by email
 
 ### With params (in .yml file)
 
-  Create a file in ```config/queries/<sql_file_name>.sql```:
+  1. Create a file in ```config/queries/<sql_file_name>.sql```:
 
   ```sql
   select id, name from accounts where id = @@0@@;
@@ -108,7 +108,7 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
   > Note: watch out for ```@@0@@```.
 
-  Create a file in ```config/options/<yaml_file_name>.yml```:
+  2. Create a file in ```config/options/<yaml_file_name>.yml```:
   
   ```yaml
   database:
@@ -133,15 +133,15 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
   > Remember ```@@0@@```? they are in the yaml file at params option
 
-  **Running alert task**
+  3. Run alert task
 
     $ bundle exec rake query_alert option=<yaml_file_name>
 
-  An alert will be sent by email
+  4. An alert will be sent by email
 
 ### With params (env var)
 
-  Create a file in ```config/queries/<sql_file_name>.sql```:
+  1. Create a file in ```config/queries/<sql_file_name>.sql```:
 
   ```sql
   select id, name from accounts where id = @@0@@ or id = @@1@@;
@@ -149,7 +149,7 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
   > Note: watch out for ```@@0@@``` and ```@@1@@```.
 
-  Create a file in ```config/options/<yaml_file_name>.yml```:
+  2. Create a file in ```config/options/<yaml_file_name>.yml```:
 
   ```yaml
   database:
@@ -170,13 +170,13 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
     subject: "Alert: 2 accounts found!"
   ```
 
-  **Run alert task**
+  3. Run alert task
 
     $ bundle exec rake query_alert option=<yaml_file_name> params="<first_account_id>,<second_account_id>"
     
   > Remember ```@@0@@``` and ```@@1@@```? they are parsed in params environment variable
 
-  An alert will be sent by email
+  4. An alert will be sent by email
 
 ### YAML file combinations
 
