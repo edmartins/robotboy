@@ -8,15 +8,15 @@ database:
 mail:
   basic_test:
     from: "basic_test@abc.com.br"
-    to: "fulano@abc.com.br"
+    to: "foo@bar.com.br"
     subject: "select"
     query: "select id, name from accounts where id = 1227;"
     expected_result: "id;name\n1227;demo\n"
   xls_test:
     from: "xls_test@abc.com.br"
-    to: "fulano@abc.com.br"
-    subject: "relatório"
-    body: "Prezados,\n\nSegue o relatório.\n\nAtt,"
+    to: "foo@bar.com.br"
+    subject: "Report"
+    body: "Dear,\n\nFollowing report.\n\nBest regards,"
     query: "select id, name from accounts where id = 1227;"
     expected_result: "id;name\n1227;demo\n"
   params_test:
