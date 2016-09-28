@@ -59,7 +59,7 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
   3. Run alert task
 
-    $ bundle exec rake query_alert option=<yaml_file_name>
+    $ bundle exec rake query_alert option=yaml_file_name
 
   4. An alert will be sent by email
 
@@ -94,7 +94,7 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
   3. Run alert task
 
-    $ bundle exec rake query_alert option=<yaml_file_name>
+    $ bundle exec rake query_alert option=yaml_file_name
 
   4. A report will be sent by email
 
@@ -135,7 +135,7 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
   3. Run alert task
 
-    $ bundle exec rake query_alert option=<yaml_file_name>
+    $ bundle exec rake query_alert option=yaml_file_name
 
   4. An alert will be sent by email
 
@@ -172,7 +172,7 @@ Mysql table ```accounts``` with this specifc data (**only for rspec and examples
 
   3. Run alert task
 
-    $ bundle exec rake query_alert option=<yaml_file_name> params="<first_account_id>,<second_account_id>"
+    $ bundle exec rake query_alert option=yaml_file_name params="first_account_id,second_account_id"
     
   > Remember ```@@0@@``` and ```@@1@@```? they are parsed in params environment variable
 
